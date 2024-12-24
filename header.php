@@ -47,6 +47,16 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+            <?php
+            wp_nav_menu(array(
+              "theme_location"=>"top_menu",
+              "menu_class" => "navbar-nav",
+              "add_li_class" =>"neogymliclass",
+              "add_a_class" => "neogymanchorclass"
+            ));
+            
+            ?>
+
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>

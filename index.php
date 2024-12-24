@@ -25,13 +25,15 @@ get_header();
           endif;
 
 
-      $args= array('post_type'=>'page');
+      $args= array('post_type'=>'student');
       $the_query = new WP_Query( $args );
 
       while ( $the_query->have_posts() ) {
                $the_query->the_post();
                the_title();
                the_content();
+              $alldepartment= get_the_category();
+              var_dump ($alldepartment);
       
       }
         
