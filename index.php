@@ -19,10 +19,10 @@ get_header();
       // endif
 
       // Display the featured image
-           if ( has_post_thumbnail() ) :
-                the_post_thumbnail( 'medium' );
+          //  if ( has_post_thumbnail() ) :
+          //       the_post_thumbnail( 'medium' );
      // You can change 'full' to any image size, like 'medium', 'thumbnail', etc.
-          endif;
+          // endif;
 
 
       $args= array('post_type'=>'student');
@@ -32,8 +32,11 @@ get_header();
                $the_query->the_post();
                the_title();
                the_content();
+               if ( has_post_thumbnail() ) :
+               the_post_thumbnail('medium');
+               endif;
               $alldepartment= get_the_category();
-              var_dump ($alldepartment);
+              // var_dump ($alldepartment);
       
       }
         

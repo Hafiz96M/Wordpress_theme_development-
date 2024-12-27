@@ -125,5 +125,50 @@ if(!function_exists('mystudentdepartment')){
 
  add_action('init','mystudentdepartment');
 
+ //add shortcode
 
+ if(!function_exists ('myword')){
+
+    function myword(){
+        add_shortcode('bestword','mybestword');
+
+        if(!function_exists('mybestword')){
+
+            function mybestword(){
+                ?>
+                <h2>Allah is almighty</h2>
+
+                <form action="/action_page.php">
+                  <label for="fname">First name:</label><br>
+                  <input type="text" id="fname" name="fname" value="John"><br>
+                  <label for="lname">Last name:</label><br>
+                  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                  <input type="submit" value="Submit">
+                </form> 
+                <?php
+            }
+        }
+    }
+
+ }
+
+
+ add_action('init','myword')
+ // add shortcode
+
+//  if(!function_exists('admissionform')){
+
+//     function admissionform(){
+//         add_shortcode('_myform','myadmissionform');
+//         if(function_exists('myadmissionform')){
+
+//             function myadmissionform(){
+//                 return "Well done";
+//             }
+//         }
+
+//     }
+//  }
+// endif;
+//  add_action('init','admissionform');
 ?>
