@@ -153,22 +153,22 @@ if(!function_exists('mystudentdepartment')){
  }
 
 
- add_action('init','myword')
- // add shortcode
+ add_action('init','myword');
 
-//  if(!function_exists('admissionform')){
+ // add shortcode-2
+if(!function_exists('admissionform')){
+    function admissionform(){
+        add_shortcode('_myform','myadmissionform');
+    }
+    if(!function_exists('myadmissionform')){
+        function myadmissionform(){
+            return " You are good";
+        }
+       
+    }
+}
 
-//     function admissionform(){
-//         add_shortcode('_myform','myadmissionform');
-//         if(function_exists('myadmissionform')){
 
-//             function myadmissionform(){
-//                 return "Well done";
-//             }
-//         }
 
-//     }
-//  }
-// endif;
-//  add_action('init','admissionform');
+ add_action('init','admissionform');
 ?>
