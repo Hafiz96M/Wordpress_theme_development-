@@ -168,7 +168,31 @@ if(!function_exists('admissionform')){
     }
 }
 
-
-
  add_action('init','admissionform');
+
+
+
+ // add codestar 
+ /**
+ *
+ * .
+ * ├── wp-content
+ * |   ├── themes
+ * |   |   ├── theme-name
+ * |   |   |   ├── style.css
+ * |   |   |   ├── screenshot.png
+ * |   |   |   ├── functions.php <--------- Open via Text Editor
+ * |   |   |   ├── ..
+ * |   |   |   ├── ...
+ *
+ */
+
+/**
+ *
+ * Codestar Framework
+ * A Simple and Lightweight WordPress Option Framework for Themes and Plugins
+ *
+ */
+require_once get_theme_file_path() .'/inc/codestar-framework/codestar-framework.php';
+require_once get_theme_file_path() .'/inc/codestar-framework/samples/admin-options.php';
 ?>

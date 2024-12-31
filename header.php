@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 
 <head>
   <!-- Basic -->
@@ -28,6 +28,7 @@
   <link href="<?php echo get_template_directory_uri();?>./assets/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="<?php echo get_template_directory_uri();?>./assets/css/responsive.css" rel="stylesheet" />
+  <?php wp_head(); ?>
 </head>
 
 <body>
@@ -38,8 +39,13 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Neogym
+            <?php
+    $options = get_option( '_prefix_my_options' );
+    echo $options['opt-text-1'];
+    
+    ?>
             </span>
+       
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
