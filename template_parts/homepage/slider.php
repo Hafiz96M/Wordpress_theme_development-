@@ -19,20 +19,30 @@
           // endif;
 
 
-      $args= array('post_type'=>'student');
+      $args= array('post_type'=>'pakegprice');
       $the_query = new WP_Query( $args );
+
+
 
       while ( $the_query->have_posts() ) {
                $the_query->the_post();
                the_title();
+
                the_content();
-               if ( has_post_thumbnail() ) :
-               the_post_thumbnail('medium');
-               endif;
-              $alldepartment= get_the_category();
+
+               $price=get_post_meta(get_the_ID(''), 'mjpricepart', true);
+               echo esc_html($price);
+
+               $url=get_post_meta(get_the_ID(''), 'reurl', true);
+               echo esc_html($url);
+              //  if ( has_post_thumbnail() ) :
+              //  the_post_thumbnail('medium');
+              //  endif;
+              // $alldepartment= get_the_category();
               // var_dump ($alldepartment);
       
       }
+    
         
         ?> 
 

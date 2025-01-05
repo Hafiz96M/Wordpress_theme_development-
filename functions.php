@@ -10,9 +10,9 @@ function mythemefunction(){
    
 }
 
-load_theme_textdomain( 'neogymtheme', get_template_directory() . '/languages' );
+load_theme_textdomain( 'neogymtextdomain', get_template_directory() . '/languages' );
 register_nav_menus(array(
-    "top_menu" => __("Top Menu", "neogymtheme")
+    "top_menu" => __("Top Menu", "neogymtextdomain")
 ));
 
 }
@@ -195,4 +195,8 @@ if(!function_exists('admissionform')){
  */
 require_once get_theme_file_path() .'/inc/codestar-framework/codestar-framework.php';
 require_once get_theme_file_path() .'/inc/codestar-framework/samples/admin-options.php';
+require_once get_theme_file_path() .'/inc/customposttype/price.php';
+require_once __DIR__ . '/inc/cmb2/init.php';
+// require_once __DIR__ . '/inc/cmb2/example-functions.php';
+require_once __DIR__ . '/inc/cmb2/price-cmb.php';
 ?>
